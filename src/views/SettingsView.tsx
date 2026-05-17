@@ -107,7 +107,7 @@ export function SettingsView() {
                 <Input
                   value={urlInput}
                   onChange={e => setUrlInput(e.target.value)}
-                  placeholder="http://localhost:1234"
+                  placeholder="http://localhost:5173"
                   size="sm"
                   fontFamily="mono"
                 />

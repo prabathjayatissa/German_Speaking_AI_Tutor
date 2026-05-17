@@ -20,7 +20,10 @@ export interface StreamChunk {
 
 export async function fetchAvailableModels(baseUrl: string): Promise<LMStudioModel[]> {
   try {
-    const res = await fetch(`${baseUrl}/v1/models`, {
+    // Use relative paths for localhost (go through dev proxy) or full URLs for remote servers
+    const isLocalhost = baseUrl.includes("localhost") || baseUrl.includes("127.0.0.1")
+    const url = isLocalhost ? "/v1/models" : `${baseUrl}/v1/models`
+    const res = await fetch(url, {
       signal: AbortSignal.timeout(5000),
     })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
@@ -42,7 +45,11 @@ export async function* streamChat(
     const controller = new AbortController()
     const timeout = setTimeout(() => controller.abort(), 30000) // 30s timeout
 
-    const res = await fetch(`${baseUrl}/v1/chat/completions`, {
+    // Use relative paths for localhost (go through dev proxy) or full URLs for remote servers
+    const isLocalhost = baseUrl.includes("localhost") || baseUrl.includes("127.0.0.1")
+    const url = isLocalhost ? "/v1/chat/completions" : `${baseUrl}/v1/chat/completions`
+
+    const res = await fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
