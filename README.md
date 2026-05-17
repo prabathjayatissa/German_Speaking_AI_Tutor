@@ -2,16 +2,15 @@
 
 <img width="1887" height="900" alt="Screenshot 2026-05-17 160706" src="https://github.com/user-attachments/assets/b74e27cb-9a3c-41dc-9428-2bd6dfa5e69c" />
 
+## Local LLM selection from the LM studio
+
+<img width="1408" height="668" alt="Screenshot 2026-05-17 160737" src="https://github.com/user-attachments/assets/efdda3d8-a0ba-445b-b467-51a4be23329c" />
 
 ## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 <img width="1887" height="900" alt="Screenshot 2026-05-17 160706" src="https://github.com/user-attachments/assets/dc8fbdd0-ce4d-43d1-90a7-b10d9e60f0b3" />
-
-## Local LLM selection from the LM studio
-
-<img width="1408" height="668" alt="Screenshot 2026-05-17 160737" src="https://github.com/user-attachments/assets/efdda3d8-a0ba-445b-b467-51a4be23329c" />
 
 
 Currently, two official plugins are available:
