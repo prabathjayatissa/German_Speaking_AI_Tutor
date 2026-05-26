@@ -1,3 +1,4 @@
+#import all the necessary packages
 import { Box, HStack, Text, Badge } from "@chakra-ui/react"
 import { useAppStore } from "./store/appStore"
 import { Sidebar } from "./components/Sidebar"
